@@ -13,6 +13,7 @@ void PlayAudioTone(int hz,int msDuration)
 	if(msDuration == -1)
 	{
 		PlaySound(NULL,0,0);
+		return;
 	}
 	int NUM_SAMPLES = ceil(msDuration*WAVFILE_SAMPLES_PER_SECOND/1000);//it can play max 10 sec tone
 	short waveform[WAVFILE_SAMPLES_PER_SECOND*10];//it can play max 10 sec tone
